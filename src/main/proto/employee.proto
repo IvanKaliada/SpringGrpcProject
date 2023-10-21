@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package com.grpc.project.stubs.employee;
+
+option java_package = "com.grpc.project.stubs.employee";
+option java_multiple_files = true;
+
+service EmployeeService{
+  rpc getEmployeeDetails(EmployeeRequest) returns (EmployeeResponse);
+}
+
+message EmployeeRequest{
+  int32 id = 1;
+}
+
+message EmployeeResponse{
+  int32 id = 1;
+  string userName = 2;
+  string name = 3;
+  string lastName = 4;
+  string role = 5;
+  int32 age = 6;
+}
