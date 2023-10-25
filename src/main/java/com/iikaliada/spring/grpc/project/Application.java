@@ -16,11 +16,11 @@ public class Application implements CommandLineRunner {
         SpringApplication.run(Application.class, args);
     }
 
-
     @Override
     public void run(String... args) throws Exception {
         int id = 1;
         String response = employeeClientService.getEmployeeRequest(id);
         System.out.println("Response: " + response);
     }
+
 }
